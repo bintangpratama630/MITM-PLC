@@ -1,0 +1,11 @@
+Selanjutnya, mencoba "membaca" paket yang terkirim antara Festo Field dengan PLC.
+1. Buat clone repository pada https://github.com/Magang-TRI-UGM-2019-STECHOQ/MITM-PLC dengan perintah
+"git clone https://github.com/Magang-TRI-UGM-2019-STECHOQ/MITM-PLC" di dalam cmd /git bash (lokasi cmd ada di folder desktop) 
+2. Buka file "scan.cpa..". Pilih frame dengan port 990.
+3. Buka file proxyUDP.py dengan cmd.
+4. Gunakan perintah python proxyUDP.py . Maka akan tertampil susunan perintah untuk meremote pesan broadcast seperti berikut :
+Localport:remoteaddr:remoteport
+5. Python proxyUDP.py 990:192.168.88.100:990. Tekan enter.
+6. Scan Festo Field.
+7. Akan tertampil paket yang berisi pesan "whereareyou...." 
+8. Karena port 990 pada ip tersebut masih terbuka, maka broadcast tidak akan terhenti dan menjadi sebuah pesan looping.
